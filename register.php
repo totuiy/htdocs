@@ -41,7 +41,7 @@
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="register.php">Register Drivers</a></li>
+      <li><a href="register.php">Register Driver</a></li>
     </ul>
  
   </div><!-- /.navbar-collapse -->

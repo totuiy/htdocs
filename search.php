@@ -30,7 +30,7 @@
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="register.php">Register Drivers</a></li>
+      <li><a href="register.php">Register Driver</a></li>
     </ul>
  
   </div><!-- /.navbar-collapse -->
@@ -79,7 +79,7 @@ $close_flag = mysql_close($link);
 
 ?>
 
-<button type="button" class="btn btn-default"><a href="index.php">Back</a></button>
+<a href="index.php" button type="button" class="btn btn-default">Back</a>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>

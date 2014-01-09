@@ -14,6 +14,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+
   </head>
   <body>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -36,7 +37,7 @@
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="register.php">Register Drivers</a></li>
+      <li><a href="register.php">Register Driver</a></li>
     </ul>
  
   </div><!-- /.navbar-collapse -->
@@ -68,7 +69,9 @@
     <div class="thumbnail">
       <div class="caption">
         <h3>STEP 2</h3>
-        <p>You can search drivers you want to ride. You can search drivers who are near your place or who are very safer than others by phone numbers or your area.</p>
+	<p>You can search drivers you want to ride from navigation var on the top. You can search drivers who are near your place or who are very safer than others by phone numbers or your area.</p>
+  </form>
+
       </div>
     </div>
   </div>

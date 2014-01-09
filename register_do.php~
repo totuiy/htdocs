@@ -33,7 +33,7 @@ if (empty($phone)) {
 		":review" => $review,
 	);
 	$stmt->execute($params);
-	header('location: http://example.com/posted.html');	
+	header('location: register_succeeded.php');	
 }	
 	
 
@@ -88,7 +88,7 @@ if (empty($phone)) {
   </div><!-- /.navbar-collapse -->
 </nav>
 <p>Please input the phone number at leaset.</p>
-<a href="index.php" button type="button" class="btn btn-default">Back</a>
+<a href="register.php" button type="button" class="btn btn-default">Back</a>
 </div></p>
 
 

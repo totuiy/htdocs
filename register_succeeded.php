@@ -41,7 +41,7 @@
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="register.php">Register Drivers</a></li>
+      <li><a href="register.php">Register Driver</a></li>
     </ul>
  
   </div><!-- /.navbar-collapse -->
@@ -49,7 +49,7 @@
 <p>Register succeeded!</p>
 <p>Thank you for using the service very much.</p>
 <p><div class="btn-group" align="right">
-  <a href="index.php" button type="button" class="btn btn-default">Back</a>
+  <a href="index.php" button type="button" class="btn btn-default">Back to Top</a>
 </div></p>
       </form>
 

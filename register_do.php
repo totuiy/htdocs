@@ -33,7 +33,7 @@ if (empty($phone)) {
 		":review" => $review,
 	);
 	$stmt->execute($params);
-	header('location: http://example.com/posted.html');	
+	header('location: register_succeeded.php');	
 }	
 	
 
@@ -82,7 +82,7 @@ if (empty($phone)) {
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="register.php">Register Drivers</a></li>
+      <li><a href="register.php">Register Driver</a></li>
     </ul>
  
   </div><!-- /.navbar-collapse -->
