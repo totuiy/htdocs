@@ -1,3 +1,44 @@
+<?php
+
+require_once('config.php');
+require_once('functions.php');
+
+session_start();
+
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$number = $_POST['number'];
+$area = $_POST['area'];
+$rate = $_POST['rate'];
+$review = $_POST['review'];
+
+$dbh = connectDb();
+
+$err = array();
+
+if (empty($phone)) {
+}else {
+
+	$sql = "insert into drivers
+		(name, phone, number, area, rate, review)
+		values
+		(:name, :phone, :number, :area, :rate, :review)";
+	$stmt = $dbh->prepare($sql);
+	$params = array(
+		":name" => $name,
+		":phone" => $phone,
+		":number" => $number,
+		":area" => $area,
+		":rate" => $rate,
+		":review" => $review,
+	);
+	$stmt->execute($params);
+	header('location: http://example.com/posted.html');	
+}	
+	
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +49,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Register Your Favorite Driver</title>
+    <title>Thank you very much for your registering!</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.css" rel="stylesheet">
@@ -45,27 +86,10 @@
     </ul>
  
   </div><!-- /.navbar-collapse -->
-</nav> 
-
-    <div class="container">
-
-      <form action="register_do.php" class="form-signin" role="form" method="POST">
-        <h2 class="form-signin-heading">Register Your Favorite Driver!</h2>
-	<input type="text" class="form-control" name="name" placeholder="Name of Driver" required>
-	<input type="text" class="form-control" name="phone" placeholder="Phone Number [Required]" required>
-	</dl>
-	<input type="text" class="form-control" name="number" placeholder="Number of the bike" required>
-	<input type="text" class="form-control" name="area" placeholder="Area" required>
-	<input type="int" class="form-control" name="rate" placeholder="Rate" required>
-	<input type="text" class="form-control" name="review" placeholder="Comment">
-	<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-	<br>
-    <p><div class="btn-group" align="right">
-  <a href="index.php" button type="button" class="btn btn-default">Back</a>
+</nav>
+<p>Please input the phone number at leaset.</p>
+<a href="index.php" button type="button" class="btn btn-default">Back</a>
 </div></p>
-      </form>
-
-    </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript

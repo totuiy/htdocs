@@ -16,20 +16,26 @@ $dbh = connectDb();
 
 $err = array();
 
-$sql = "insert into drivers
-	(name, phone, number, area, rate, review)
-	values
-	(:name, :phone, :number, :area, :rate, :review)";
-$stmt = $dbh->prepare($sql);
-$params = array(
-	":name" => $name,
-	":phone" => $phone,
-	":number" => $number,
-	":area" => $area,
-	":rate" => $rate,
-	":review" => $review,
-);
-$stmt->execute($params);
+if (empty($phone)) {
+}else {
+
+	$sql = "insert into drivers
+		(name, phone, number, area, rate, review)
+		values
+		(:name, :phone, :number, :area, :rate, :review)";
+	$stmt = $dbh->prepare($sql);
+	$params = array(
+		":name" => $name,
+		":phone" => $phone,
+		":number" => $number,
+		":area" => $area,
+		":rate" => $rate,
+		":review" => $review,
+	);
+	$stmt->execute($params);
+	header('location: http://example.com/posted.html');	
+}	
+	
 
 ?>
 
@@ -43,7 +49,7 @@ $stmt->execute($params);
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Register Your Favorite Driver</title>
+    <title>Thank you very much for your registering!</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.css" rel="stylesheet">
@@ -62,9 +68,8 @@ $stmt->execute($params);
   </head>
 
   <body>
-
 <!-- navbar -->
-   <nav class="navbar navbar-inverse" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -81,26 +86,10 @@ $stmt->execute($params);
     </ul>
  
   </div><!-- /.navbar-collapse -->
-</nav> 
-
-    <div class="container">
-
-      <form action="" class="form-signin" role="form" method="POST">
-        <h2 class="form-signin-heading">Register Your Favorite Driver!</h2>
-	<input type="text" class="form-control" name="name" placeholder="Name of Driver" required>
-	<input type="text" class="form-control" name="phone" placeholder="Phone Number" required>
-	<input type="text" class="form-control" name="number" placeholder="Number of the bike" required>
-	<input type="text" class="form-control" name="area" placeholder="Area" required>
-	<input type="int" class="form-control" name="rate" placeholder="Rate" required>
-	<input type="text" class="form-control" name="review" placeholder="Comment">
-	<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-	<br>
-    <p><div class="btn-group" align="right">
-  <button type="button" class="btn btn-default"><a href="index.php">Back</a></button>
+</nav>
+<p>Please input the phone number at leaset.</p>
+<a href="register.php" button type="button" class="btn btn-default">Back</a>
 </div></p>
-      </form>
-
-    </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript

@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Register Your Favorite Driver</title>
+    <title>Register Succeeded</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.css" rel="stylesheet">
@@ -46,21 +46,9 @@
  
   </div><!-- /.navbar-collapse -->
 </nav> 
-
-    <div class="container">
-
-      <form action="register_do.php" class="form-signin" role="form" method="POST">
-        <h2 class="form-signin-heading">Register Your Favorite Driver!</h2>
-	<input type="text" class="form-control" name="name" placeholder="Name of Driver" required>
-	<input type="text" class="form-control" name="phone" placeholder="Phone Number [Required]" required>
-	</dl>
-	<input type="text" class="form-control" name="number" placeholder="Number of the bike" required>
-	<input type="text" class="form-control" name="area" placeholder="Area" required>
-	<input type="int" class="form-control" name="rate" placeholder="Rate" required>
-	<input type="text" class="form-control" name="review" placeholder="Comment">
-	<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-	<br>
-    <p><div class="btn-group" align="right">
+<p>Register succeeded!</p>
+<p>Thank you for using the service very much.</p>
+<p><div class="btn-group" align="right">
   <a href="index.php" button type="button" class="btn btn-default">Back</a>
 </div></p>
       </form>
