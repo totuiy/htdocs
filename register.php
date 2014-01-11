@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Register Your Favorite Driver</title>
+    <title>Register Driver</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.css" rel="stylesheet">
@@ -48,7 +48,6 @@
 </nav> 
 
     <div class="container">
-
       <form action="register_do.php" class="form-signin" role="form" method="POST">
         <h2 class="form-signin-heading">Register Your Favorite Driver!</h2>
 	<input type="text" class="form-control" name="name" placeholder="Name of Driver" required>
@@ -73,3 +72,4 @@
     <!-- Placed at the end of the document so the pages load faster -->
   </body>
 </html>
+

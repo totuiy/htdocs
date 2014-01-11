@@ -5,6 +5,7 @@ require_once('functions.php');
 
 session_start();
 
+
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $number = $_POST['number'];
@@ -25,30 +26,32 @@ function phoneExists($phone, $dbh) {
 }
 
 if (empty($phone)) {
-	// print error message on this page
 }else {
 	if (phoneExists($phone, $dbh)) {
-		// jump to driver_exists.php
-		header('location: driver_exists.php');
+		
+
+		$sql = "insert into drivers
+			(name, phone, number, area, rate, review)
+			values
+			(:name, :phone, :number, :area, :rate, :review)";
+		$stmt = $dbh->prepare($sql);
+		$params = array(
+			":name" => $name,
+			":phone" => $phone,
+			":number" => $number,
+			":area" => $area,
+			":rate" => $rate,
+			":review" => $review,
+		);
+		$stmt->execute($params);
+		header('location: register_succeeded.php');	
 	}else {
-	$sql = "insert into drivers
-		(name, phone, number, area, rate, review)
-		values
-		(:name, :phone, :number, :area, :rate, :review)";
-	$stmt = $dbh->prepare($sql);
-	$params = array(
-		":name" => $name,
-		":phone" => $phone,
-		":number" => $number,
-		":area" => $area,
-		":rate" => $rate,
-		":review" => $review,
-	);
-	$stmt->execute($params);
-	header('location: register_succeeded.php');
-	}	
-}	
+		echo "The driver already exists.";
+	}
+}		
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -92,7 +95,7 @@ if (empty($phone)) {
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li><a href="register.php">Register Driver</a></li>
+      <li><a href="register.php">Register Drivers</a></li>
     </ul>
  
   </div><!-- /.navbar-collapse -->

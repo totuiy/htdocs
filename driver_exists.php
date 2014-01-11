@@ -1,9 +1,7 @@
-
-
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Register Driver</title>
+    <title>Boda-Border</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,11 +15,6 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./css/signin.css" rel="stylesheet">
   </head>
   <body>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -50,24 +43,8 @@
   </div><!-- /.navbar-collapse -->
 </nav> 
 
-    <div class="container">
-      <form action="register_do.php" class="form-signin" role="form" method="POST">
-        <h2 class="form-signin-heading">Register Your Favorite Driver!</h2>
-	<input type="text" class="form-control" name="name" placeholder="Name of Driver" required>
-	<input type="text" class="form-control" name="phone" placeholder="Phone Number [Required]" required>
-	</dl>
-	<input type="text" class="form-control" name="number" placeholder="Number of the bike" required>
-	<input type="text" class="form-control" name="area" placeholder="Area" required>
-	<input type="int" class="form-control" name="rate" placeholder="Rate" required>
-	<input type="text" class="form-control" name="review" placeholder="Comment">
-	<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-	<br>
-    <p><div class="btn-group" align="right">
-  <a href="index.php" button type="button" class="btn btn-default">Back</a>
-</div></p>
-      </form>
+<p>Sorry, the driver already exists.</p>
+<p>Please try searching.</p>
 
-    </div> <!-- /container -->
-  
-	</body>
+  </body>
 </html>
