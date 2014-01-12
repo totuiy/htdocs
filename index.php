@@ -24,7 +24,7 @@
 
 
 <!-- navbar -->
-   <nav class="navbar navbar-inverse" role="navigation">
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -48,13 +48,15 @@
 <div class="jumbotron">
   <h1>Boda-Border</h1>
   <p>Enjoy Your Boda Life<p>
-  <form class="navbar-form navbar-left" role="search" action = "search.php" method="post">
+<br>
+<form role="form" action="search.php" method="post">
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search" name="nm">
+    <input type="text" class="form-control" placeholder="Search By Name" name="nm">
   </div>
   <p><button class="btn btn-primary btn-lg" role="button" type="submit">Search Now!</button></p>
 </form>
 </div>
+
 
 <div class="row">
   <div class="col-sm-12 col-md-12">

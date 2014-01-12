@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>	
-	<title>Result of Search</title>
+  <head>        
+        <title>Result of Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 <body>
 
 <!-- navbar -->
-   <nav class="navbar navbar-inverse" role="navigation">
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -26,7 +26,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="boda-border.com" ><font color="white">Boda-Border</font></a>
+    <a class="navbar-brand" href="index.php" ><font color="white">Boda-Border</font></a>
   </div>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
@@ -36,14 +36,18 @@
   </div><!-- /.navbar-collapse -->
 </nav> 
 
+<br><br><br>
+<h2>Result of the Search</h2>
+<br>
+
 <?php
 
-$link = mysql_connect('localhost', 'dbuser', '5TNKr847');
+// $link = mysql_connect('localhost', 'dbuser', '5TNKr847');
+$link = mysql_connect('localhost', 'root', 'root');
+
 if (!$link) {
     die('Failed to connect'.mysql_error());
 }
-
-
 
 $db_selected = mysql_select_db('boda', $link);
 if (!$db_selected){
@@ -58,18 +62,24 @@ if (!$result) {
 }
 
 // Print the Result
-$table = "table table-striped";
+$table = '"table table-striped"';
+$detailPage = '"detail.php"';
+$reviewPage = '"review.php"';
+$height = '"35"';
+$align = '"left"';
 echo"<table class=".$table.">";
-echo"<tr><td>Name</td><td>Phone</td><td>Number</td><td>Area</td><td>Rate</td><td>Review</td></tr>";
+echo"<tr><td height=".$height." align=".$align."><strong>Name</strong></td><td><strong>Phone Number</strong></td><td><strong>Plate Number</strong></td><td><strong>Area</strong></td><td><strong>Rate (Out of Five)</strong></td><td><strong>Most Recent Comment</strong></td><td></td><td></td></tr>";
 while ($row = mysql_fetch_assoc($result)) {
-	echo"<tr>";
-	echo"<td>".$row["name"]."</td>";
-	echo"<td>".$row["phone"]."</td>";
-	echo"<td>".$row["number"]."</td>";
-	echo"<td>".$row["area"]."</td>";
-	echo"<td>".$row["rate"]."</td>";
+        echo"<tr>";
+        echo"<td>".$row["name"]."</td>";
+        echo"<td>".$row["phone"]."</td>";
+        echo"<td>".$row["number"]."</td>";
+        echo"<td>".$row["area"]."</td>";
+        echo"<td>".$row["rate"]."</td>";
 	echo"<td>".$row["review"]."</td>";
-	echo"</tr>";
+	echo"<td><a href=".$detailPage.">Detail</a></td>";
+	echo"<td><a href=".$reviewPage.">Review</a></td>";
+        echo"</tr>";
 }
 echo"</table>";
 
@@ -78,8 +88,10 @@ $close_flag = mysql_close($link);
 
 
 ?>
-
-<a href="index.php" button type="button" class="btn btn-default">Back</a>
+	<br>
+	<div class="btn-group">
+	<a href="index.php" button type="button" class="btn btn-default">Back to Top</a>
+	</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
