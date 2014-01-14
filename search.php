@@ -58,8 +58,7 @@
 session_start();
 
 // connect database
-// $link = mysql_connect('localhost', 'dbuser', '5TNKr847');
-$link = mysql_connect('localhost', 'root', 'root');
+$link = mysql_connect('localhost', 'dbuser', '5TNKr847');
 if (!$link) { die('Failed to connect'.mysql_error()); }
 $db_selected = mysql_select_db('boda', $link);
 if (!$db_selected){ die('Failed to select a database'.mysql_error()); }
