@@ -2,8 +2,20 @@
 <html>
   <head>
     <title>Boda-Border</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/signin.css" rel="stylesheet">
+    
+	<!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<!-- Call .less file -->
 	<link rel="stylesheet/less" type="text/css" href="less/jumbotron.less">
@@ -94,5 +106,21 @@
     </div>
   </div>
 </div>
+
+<!-- footer -->
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+<!--     
+ <li><a href="#">Link</a></li>
+-->
+	</ul>
+    <ul class="nav navbar-nav navbar-right">
+      <p class="navbar-text">Copyright (c) totu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
   </body>
 </html>

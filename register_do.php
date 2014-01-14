@@ -32,9 +32,9 @@ if (empty($phone)) {
 		header('location: driver_exists.php');
 	}else {
 	$sql = "insert into drivers
-		(name, phone, number, area, rate, review)
+		(name, phone, number, area, rate)
 		values
-		(:name, :phone, :number, :area, :rate, :review)";
+		(:name, :phone, :number, :area, :rate)";
 	$stmt = $dbh->prepare($sql);
 	$params = array(
 		":name" => $name,
@@ -42,12 +42,39 @@ if (empty($phone)) {
 		":number" => $number,
 		":area" => $area,
 		":rate" => $rate,
+	);
+	$stmt->execute($params);
+	
+	// connect again
+	// $link = mysql_connect('localhost', 'dbuser', '5tnkr847');
+	$link = mysql_connect('localhost', 'root', 'root');
+	if (!$link) { die('Failed to connect'.mysql_error()); }
+	$db_selected = mysql_select_db('boda', $link);
+	if (!$db_selected){ die('Failed to select a database'.mysql_error()); }
+	// Pick Drivers' IDs
+	$recordSet = mysql_query("SELECT id FROM drivers WHERE phone = '$phone'");
+	if (!$recordSet) { die('Failed of query: '.mysql_error()); }
+	$data = mysql_fetch_assoc($recordSet);
+	$id = $data["id"];
+	// insert rate and review
+	$sql = "INSERT INTO reviews
+		(id, rate, review)
+		values
+		(:id, :rate, :review)";
+	$stmt = $dbh->prepare($sql);
+	$params = array(
+		":id" => $id,
+		":rate" => $rate,
 		":review" => $review,
 	);
 	$stmt->execute($params);
 	header('location: register_succeeded.php');
 	}	
-}	
+}
+
+
+
+mysql_close($link);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +86,7 @@ if (empty($phone)) {
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Thank you very much for your registering!</title>
+    <title>Thank you very much for your registering</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.css" rel="stylesheet">
@@ -79,7 +106,7 @@ if (empty($phone)) {
 
   <body>
 <!-- navbar -->
-<nav class="navbar navbar-inverse" role="navigation">
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -94,13 +121,29 @@ if (empty($phone)) {
     <ul class="nav navbar-nav">
       <li><a href="register.php">Register Driver</a></li>
     </ul>
- 
+  </div><!-- navbar-collapse -->
+</nav>
+
+<br><br><br>
+<div align="center">
+<h3>Please input the phone number at leaset.</h3>
+<a href="register.php" button type="button" class="btn btn-default">Back</a>
+</div>
+
+<!-- footer -->
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+<!--     
+ <li><a href="#">Link</a></li>
+-->
+	</ul>
+    <ul class="nav navbar-nav navbar-right">
+      <p class="navbar-text">Copyright (c) totu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
-<p>Please input the phone number at leaset.</p>
-<a href="register.php" button type="button" class="btn btn-default">Back</a>
-</div></p>
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

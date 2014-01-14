@@ -28,7 +28,7 @@
 
   <body>
 <!-- navbar -->
-<nav class="navbar navbar-inverse" role="navigation">
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -43,18 +43,31 @@
     <ul class="nav navbar-nav">
       <li><a href="register.php">Register Driver</a></li>
     </ul>
- 
+  </div><!-- navbar-collapse -->
+</nav>
+
+
+<br><br><br>
+<div align="center">
+<h3>Register succeeded!</h3>
+<h3>Thank you for using the service very much.</h3>
+<a href="register.php" button type="button" class="btn btn-default">Back</a>
+</div>
+
+<!-- footer -->
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+<!--     
+ <li><a href="#">Link</a></li>
+-->
+	</ul>
+    <ul class="nav navbar-nav navbar-right">
+      <p class="navbar-text">Copyright (c) totu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </ul>
   </div><!-- /.navbar-collapse -->
-</nav> 
-<p>Register succeeded!</p>
-<p>Thank you for using the service very much.</p>
-<p><div class="btn-group" align="right">
-  <a href="index.php" button type="button" class="btn btn-default">Back to Top</a>
-</div></p>
-      </form>
-
-    </div> <!-- /container -->
-
+</nav>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

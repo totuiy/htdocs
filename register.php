@@ -2,9 +2,22 @@
 <html>
   <head>
     <title>Register Boda-Boda Driver</title>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/signin.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +48,7 @@
   </div><!-- /.navbar-collapse -->
 </nav> 
 
-	<br><br><br><br>
+	<br><br>
 	<div Align="center">
 		<h2>Register Boda-Boda Driver<br><small>Please input driver's information</small></h2>
 	</div>
@@ -110,12 +123,28 @@
 	    </div>
 	  </div>
 	
-	<br><br><br>
+	<!-- button to back -->	
+	<br>
 	<div Align="right">
 	<div class="btn-group">
 	<a href="index.php" button type="button" class="btn btn-default">Back to Top</a>
 	</div></div>
 	</form>
+
+<!-- footer -->
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+<!--     
+ <li><a href="#">Link</a></li>
+-->
+	</ul>
+    <ul class="nav navbar-nav navbar-right">
+      <p class="navbar-text">Copyright (c) totu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
