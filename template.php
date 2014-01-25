@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Register Boda-Boda Driver</title>
+    <title>TEMPLATE</title>
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,82 +48,6 @@
   </div><!-- /.navbar-collapse -->
 </nav> 
 
-	<br><br>
-	<div Align="center">
-		<h2>Register Boda-Boda Driver<br><small>Please input driver's information</small></h2>
-	</div>
-	<br>
-
-	<!-- Forms -->
-	<!-- Name -->
-	<form action="register_do.php" class="form-horizontal" role="form" method="POST">
-	  <div class="form-group">
-	    <label for="inputName" class="col-sm-3 control-label">Driver's Name</label>
-	    <div class="col-sm-3">
-	      <input type="text" class="form-control" name="fname" placeholder="First Name">
-	    </div>
-		<div class="col-sm-3">
-			<input type="text" class="form-control" name="sname" placeholder="Last Name (Family Name)">
-		</div>
-	    <label class="col-sm-3 control-label"></label>
-	  </div>
-
-	<!-- Phone Number -->
-	  <div class="form-group">
-	    <label for="inputPhone" class="col-sm-3 control-label">Phone Number</label>
-	    <div class="col-sm-6">
-	      <input type="text" class="form-control" name="phone" placeholder="Phone Number">
-	    </div>
-	    <label class="col-sm-3 control-label"></label>
-	  </div>
-
-	<!-- Plate Number-->
-	  <div class="form-group">
-	    <label for="inputNumber" class="col-sm-3 control-label">Plate Number</label>
-	    <div class="col-sm-6">
-	      <input type="text" class="form-control" name="number" placeholder="Plate Number">
-	    </div>
-	    <label class="col-sm-3 control-label"></label>
-	  </div>
-
-	<!-- Area -->
-	  <div class="form-group">
-	    <label for="inputArea" class="col-sm-3 control-label">Area</label>
-	    <div class="col-sm-6">
-	      <input type="text" class="form-control" name="area" placeholder="Area">
-	    </div>
-	    <label class="col-sm-3 control-label"></label>
-	  </div>
-
-	<!-- Rate -->
-	<div class="form-group">
-		<label for="inputRate3" class="col-sm-3 control-label">Rate</label>
-		<div class="col-sm-2">
-			<select class="form-control" name="rate">
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
-			</select>
-		</div>
-	    <label class="col-sm-7 control-label"></label>
-	</div>
-
-	<!-- comment -->
-	<div class="form-group">
-	    <label for="inputReview" class="col-sm-3 control-label">Comment</label>
-	    <div class="col-sm-6">
-	      <textarea type="text" class="form-control" name="review" placeholder="Comment" rows="3"></textarea>
-	    </div>
-	    <label class="col-sm-3 control-label"></label>
-	  </div>
-	
-	<div class="form-group">
-	    <div class="col-sm-offset-3 col-sm-3">
-	      <button type="submit" class="btn btn-default" type="submit">Register</button>
-	    </div>
-	  </div>
 	
 	<!-- button to back -->	
 	<br>

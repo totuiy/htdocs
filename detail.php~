@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Driver Already Exists</title>
+    <title>Detail of the Driver</title>
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,8 +28,6 @@
   </head>
   <body>
 
-
-
 <!-- navbar -->
    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -50,10 +48,6 @@
   </div><!-- /.navbar-collapse -->
 </nav> 
 
-
-<p>Sorry, the driver already exists.</p>
-<p>Please try searching.</p>
-
 	
 	<!-- button to back -->	
 	<br>
@@ -72,8 +66,8 @@
  <li><a href="#">Link</a></li>
 -->
 	</ul>
-    <ul class="nav navbar-nav navbar-left">
-      <p class="navbar-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright (c) totu</p>
+    <ul class="nav navbar-nav navbar-right">
+      <p class="navbar-text">Copyright (c) totu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>

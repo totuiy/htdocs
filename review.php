@@ -106,8 +106,8 @@ $_SESSION['data'] = $_GET["id"];
  <li><a href="#">Link</a></li>
 -->
 	</ul>
-    <ul class="nav navbar-nav navbar-right">
-      <p class="navbar-text">Copyright (c) totu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <ul class="nav navbar-nav navbar-left">
+      <p class="navbar-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright (c) totu</p>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>

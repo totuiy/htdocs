@@ -5,7 +5,8 @@ require_once('functions.php');
 
 session_start();
 
-$name = $_POST['name'];
+$fname	= $_POST['fname'];
+$sname = $_POST['sname'];
 $phone = $_POST['phone'];
 $number = $_POST['number'];
 $area = $_POST['area'];
@@ -13,8 +14,6 @@ $rate = $_POST['rate'];
 $review = $_POST['review'];
 
 $dbh = connectDb();
-
-$err = array();
 
 function phoneExists($phone, $dbh) {
 	$sql ="select * from drivers where phone = :phone limit 1";
@@ -31,13 +30,11 @@ if (empty($phone)) {
 		// jump to driver_exists.php
 		header('location: driver_exists.php');
 	}else {
-	$sql = "insert into drivers
-		(name, phone, number, area, rate)
-		values
-		(:name, :phone, :number, :area, :rate)";
+		$sql = "INSERT INTO `boda`.`drivers` (`id`, `fname`, `sname`, `phone`, `number`, `area`, `rate`) VALUES (NULL, :fname, :sname, :phone, :number, :area, :rate);";
 	$stmt = $dbh->prepare($sql);
 	$params = array(
-		":name" => $name,
+		":fname" => $fname,
+		":sname" => $sname,
 		":phone" => $phone,
 		":number" => $number,
 		":area" => $area,
