@@ -48,12 +48,55 @@
   </div><!-- /.navbar-collapse -->
 </nav> 
 
-	
+<br><br>
+<div Align="center">
+<h2>Detail of The Driver<br><small>All Reviews and Ratings</small></h2>
+</div><br><br>
+
+<?php
+
+require_once('config.php');
+require_once('functions.php');
+
+session_start();
+
+$data_id = $_GET["id"];
+
+// connect database
+// $dbh = connectDb();
+$link = mysql_connect('localhost', 'root', 'root');
+if (!$link) { die('Failed to connect'.mysql_error()); }
+$db_selected = mysql_select_db('boda', $link);
+if (!$db_selected){ die('Failed to select a database'.mysql_error()); }
+
+// Pick dates of reviews
+$result = mysql_query("SELECT * FROM reviews WHERE id = $data_id");
+if (!$result) { die('Failed of query: '.mysql_error()); }
+$data = mysql_fetch_assoc($recordSet);
+
+// Print the Result
+$table = '"table table-striped"';
+$align = '"left"';
+$type = '"button"';
+$class = '"btn btn-primary"';
+echo"<table class=".$table.">";
+echo"<tr><td align=".$align."><strong>Date of Review</strong></td><td><strong>Rating</strong></td><td><strong>Comment</strong></td></tr>";
+while ($row = mysql_fetch_assoc($result)) {
+	echo"<tr>";
+	echo"<td>".$row["date"]."</td>";
+	echo"<td>".$row["rate"]."</td>";
+	echo"<td>".$row["review"]."</td>";
+	echo"</tr>";
+}
+echo"</table>";
+
+?>
+
 	<!-- button to back -->	
 	<br>
 	<div Align="right">
 	<div class="btn-group">
-	<a href="index.php" button type="button" class="btn btn-default">Back to Top</a>
+	<a href="search.php" button type="button" class="btn btn-default">Back</a>
 	</div></div>
 	</form>
 

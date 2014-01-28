@@ -87,7 +87,7 @@ $data_review = mysql_fetch_assoc($recordReview);
 
 // Print the Result
 $table = '"table table-striped"';
-$detailPage = '"detail.php"';
+$detailPage = "\"detail.php?id=";
 $reviewPage = "\"review.php?id=";
 $align = '"left"';
 $type='"button"';
@@ -112,8 +112,9 @@ while ($row = mysql_fetch_assoc($result)) {
 		echo"&#9734";
 	}	
 	echo"</td>";
+	// Pass the date of id by GET method when it's clicked
 	// echo"<td>".$data_review["review"]."</td>";
-	echo"<td><a href=".$detailPage.">Detail</a></td>";
+	echo"<td><a href=".$detailPage.$id[$i]."\">Detail</a></td>";
 	echo"<td><a href=".$reviewPage.$id[$i]."\">Review</a></td>";
 	$i = $i +1;
         echo"</tr>";
